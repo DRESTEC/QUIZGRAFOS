@@ -1,21 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package quizgrafos;
 
-/**
- *
- * @author Diego Vivas
- */
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Graph miGrafo = new Graph(true,false);
+
+        miGrafo.addVertex("Bogotá");
+        miGrafo.addVertex("Bucaramanga");
+        miGrafo.addVertex("Medellín");
+
+        Vertex bog = miGrafo.getVertexByValue("bogota");
+        Vertex buc = miGrafo.getVertexByValue("Bucaramanga");
+        Vertex med = miGrafo.getVertexByValue("Medellín");
+
+        miGrafo.addEdge(bog,buc,397);
+        miGrafo.addEdge(bog,med,416);
+        miGrafo.addEdge(med,buc,392);
+
     }
     
 }
