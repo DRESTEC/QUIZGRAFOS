@@ -24,4 +24,20 @@ public class Vertex {
     public void addEdge(Vertex endVertex, Integer weight){
         this.edges.add(new Edge(this, endVertex, weight));
     }
+    
+    public void removeEdge(Vertex endVertex) {
+        this.edges.removeIf(edge -> edge.getEnd().equals(endVertex));
+    }
+    
+    public ArrayList<Edge> getEdges(){
+        return this.edges;
+    }
+    
+    public String getData(){
+        return this.data;
+    }
+    
+    public void print(boolean isWeighted){
+        System.out.println(isWeighted);
+    }
 }
