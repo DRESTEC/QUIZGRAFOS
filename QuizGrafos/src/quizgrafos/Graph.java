@@ -5,10 +5,22 @@
  */
 package quizgrafos;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Diego Vivas
  */
 public class Graph {
     
+    private ArrayList<Vertex> vertices;
+    private boolean isWeighted;
+    private boolean isDirected;
+    
+    public Graph(boolean inputIsWeighted, boolean inputIsDirected){
+        this.vertices = new ArrayList<Vertex>();
+        this.isWeighted = inputIsWeighted;
+        this.isDirected = inputIsDirected;
+    }
+
 }
