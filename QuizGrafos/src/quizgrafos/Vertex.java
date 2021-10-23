@@ -5,10 +5,23 @@
  */
 package quizgrafos;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Diego Vivas
  */
 public class Vertex {
     
+    private String data;
+    private ArrayList<Edge>edges;
+    
+    public Vertex(String inputData){
+        this.data = inputData;
+        this.edges = new ArrayList<Edge>();
+    }
+    
+    public void addEdge(Vertex endVertex, Integer weight){
+        this.edges.add(new Edge(this, endVertex, weight));
+    }
 }
